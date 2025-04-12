@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Indigenous BC: Experience Our Land, Our Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #ffffff;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .cultural-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #f7f7f7;
+        }
+
+        .cultural-section h2 {
+            font-size: 2.5em;
+            color: #1a3d2f;
+            margin-bottom: 1.5rem;
+        }
+
+        .cultural-section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background: #fff;
+        }
+
+        .feature-card {
+            background: white;
+            width: 350px;
+            margin: 20px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin: 1rem 0;
+            color: #1a3d2f;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .campaign-section {
+            background: linear-gradient(rgba(26, 61, 47, 0.9), rgba(26, 61, 47, 0.9)), url('pictures/Campaign Section.webp') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin: 0;
+        }
+
+        .campaign-section h2 {
+            font-size: 2.8em;
+            margin-bottom: 1.5rem;
+        }
+
+        .campaign-section p {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+
+        .campaign-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .campaign-btn {
+            background: #e6a23c;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .campaign-btn:hover {
+            background: #d08a2e;
+            transform: translateY(-3px);
+        }
+
+        .campaign-btn.secondary {
+            background: transparent;
+            border: 3px solid white;
+        }
+
+        .campaign-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #1a3d2f;
+            color: white;
+        }
+
+        .social-links {
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8em;
+            margin: 0 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #e6a23c;
+        }
+
+        .copyright {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .audience-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tag {
+            background: #1a3d2f;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1.1em;
+        }
+
+        .value-prop {
+            background: #fff;
+            padding: 4rem 2rem;
+        }
+
+        .value-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 2rem;
+            background: #f7f7f7;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-item i {
+            font-size: 2.5em;
+            color: #e6a23c;
+            margin-bottom: 1rem;
+        }
+
+        .partners {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .partner-logos img {
+            height: 60px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .partner-logos img:hover {
+            opacity: 1;
+        }
+
+        .promo-banner {
+            background: #e6a23c;
+            color: white;
+            text-align: center;
+            padding: 0.8rem;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .promo-banner p {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .promo-banner .highlight {
+            font-weight: bold;
+            color: #1a3d2f;
+        }
+
+        .ad-carousel {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+            margin: 2rem 0;
+            background: #1a3d2f;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-section {
+            background: #f7f7f7;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .intro-section h2 {
+            color: #1a3d2f;
+            font-size: 2em;
+            margin-bottom: 1rem;
+        }
+
+        .intro-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .ad-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .ad-slide.active {
+            opacity: 1;
+        }
+
+        .ad-slide:nth-child(1) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/carousel/Cultural Experience.jpg');
+        }
+
+        .ad-slide:nth-child(2) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/carousel/wildlife tour.jpeg');
+        }
+
+        .ad-slide:nth-child(3) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/carousel/culinary .jpeg');
+        }
+
+        .ad-content {
+            max-width: 800px;
+        }
+
+        .ad-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .ad-content p {
+            font-size: 1.3em;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-banner {
+            background: #1a3d2f;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-banner h2 {
+            font-size: 2em;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .countdown {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .countdown span {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e6a23c;
+        }
+
+        .seasonal-promo {
+            background: #f7f7f7;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .promo-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .promo-item h3 {
+            color: #1a3d2f;
+            margin-bottom: 1rem;
+        }
+
+        .promo-price {
+            font-size: 1.8em;
+            color: #e6a23c;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .promo-price small {
+            font-size: 0.5em;
+            color: #666;
+        }
+
+        /* Add navigation dots for the carousel */
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        .metrics-dashboard {
+            background: #f7f7f7;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 2.5em;
+            color: #e6a23c;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #1a3d2f;
+            font-size: 1.2em;
+        }
+
+        .audience-section {
+            background: #1a3d2f;
+            color: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .persona-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .persona-name {
+            font-size: 1.5em;
+            color: #e6a23c;
+            margin-bottom: 1rem;
+        }
+
+        .persona-stats {
+            margin-top: 1rem;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .usp-banner {
+            background: linear-gradient(45deg, #1a3d2f, #e6a23c);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .usp-banner h2 {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+        }
+
+        .usp-banner p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .media-mix {
+            background: #f7f7f7;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .media-channel {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-channel h3 {
+            color: #1a3d2f;
+            margin-bottom: 1rem;
+        }
+
+        .budget-bar {
+            height: 20px;
+            background: #e6e6e6;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .budget-fill {
+            height: 100%;
+            background: #e6a23c;
+            border-radius: 10px;
+        }
+
+        .creative-strategy {
+            background: #1a3d2f;
+            color: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .mood-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .mood-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .conversion-funnel {
+            background: #f7f7f7;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .funnel-steps {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .funnel-step {
+            width: 100%;
+            padding: 2rem;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .funnel-step:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid white;
+        }
+
+        .roi-calculator {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .calculator-input {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 2px solid #e6e6e6;
+            border-radius: 8px;
+            font-size: 1.1em;
+        }
+
+        .calculator-result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: #f7f7f7;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .calculator-result h3 {
+            color: #1a3d2f;
+            margin-bottom: 1rem;
+        }
+
+        .calculator-result .value {
+            font-size: 2em;
+            color: #e6a23c;
+            font-weight: bold;
+        }
+
+        .calculator-details {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Promotional Banner -->
+    <div class="promo-banner">
+        <p>🌟 Special Spring Offer: <span class="highlight">Save 20% on Cultural Experiences</span> • Limited Time Only!
+        </p>
+    </div>
+
+    <header>
+        <h1>Journey Deeper</h1>
+        <p>Connect with the land and its original storytellers. Experience BC's living cultures—where every journey
+            supports Indigenous heritage and sustainable futures.</p>
+    </header>
+
+    <section class="intro-section">
+        <h2>Discover Authentic Indigenous Experiences</h2>
+        <p>From the rugged coastlines to the majestic mountains, British Columbia's Indigenous communities invite you to
+            experience our rich cultural heritage and breathtaking landscapes. Each journey supports local communities
+            and helps preserve our traditions for future generations.</p>
+    </section>
+
+    <!-- Ad Carousel -->
+    <div class="ad-carousel">
+        <!-- Please add these images to images/carousel/ directory:
+             1. cultural-experience.jpg - Traditional craft workshop or cultural demonstration
+             2. wildlife-tour.jpg - Guided wildlife tour or nature experience
+             3. culinary-experience.jpg - Indigenous culinary experience -->
+        <div class="ad-slide active">
+            <div class="ad-content">
+                <h2>Experience Ancient Traditions</h2>
+                <p>Book now and receive a complimentary traditional craft workshop worth $150</p>
+                <a href="#" class="campaign-btn">Claim Offer</a>
+            </div>
+        </div>
+        <div class="ad-slide">
+            <div class="ad-content">
+                <h2>Guided Wildlife Experiences</h2>
+                <p>Early bird pricing: Save 25% on guided Indigenous wildlife tours</p>
+                <a href="#" class="campaign-btn">Reserve Now</a>
+            </div>
+        </div>
+        <div class="ad-slide">
+            <div class="ad-content">
+                <h2>Traditional Culinary Journey</h2>
+                <p>Discover authentic Indigenous cuisine and cooking workshops</p>
+                <a href="#" class="campaign-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <section class="cultural-section">
+        <h2>Unmatched. Unforgettable. Indigenous BC.</h2>
+        <p>Each Indigenous nation in British Columbia offers authentic, community-led experiences that transform
+            visitors while sustaining our cultures and communities. From eco-conscious travel to cultural immersion,
+            discover why conscious travelers worldwide choose Indigenous BC.</p>
+        <div class="audience-tags">
+            <span class="tag">Eco-Tourism</span>
+            <span class="tag">Cultural Experiences</span>
+            <span class="tag">Sustainable Travel</span>
+            <span class="tag">Authentic Adventures</span>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner">
+        <h2>Book Your Indigenous Experience Today</h2>
+        <p>Early Bird Summer 2025 Packages Available Now</p>
+        <div class="countdown">
+            Offer ends in: <span>14 days 06:23:45</span>
+        </div>
+        <a href="#" class="campaign-btn">Book Now & Save</a>
+    </section>
+
+    <!-- Seasonal Promotions -->
+    <section class="seasonal-promo">
+        <h2>Spring 2025 Featured Experiences</h2>
+        <div class="promo-grid">
+            <div class="promo-item">
+                <h3>Cultural Heritage Tour</h3>
+                <p>3-day immersive experience with traditional accommodations</p>
+                <div class="promo-price">
+                    $699 <small>per person</small>
+                </div>
+                <a href="#" class="campaign-btn">Book Now</a>
+            </div>
+            <div class="promo-item">
+                <h3>Wilderness Adventure</h3>
+                <p>5-day guided tour with Indigenous knowledge keepers</p>
+                <div class="promo-price">
+                    $1,299 <small>per person</small>
+                </div>
+                <a href="#" class="campaign-btn">Book Now</a>
+            </div>
+            <div class="promo-item">
+                <h3>Artisan Workshop Series</h3>
+                <p>2-day traditional crafting experience with local artists</p>
+                <div class="promo-price">
+                    $449 <small>per person</small>
+                </div>
+                <a href="#" class="campaign-btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="value-prop">
+        <div class="value-container">
+            <h2>Why Choose Indigenous Tourism BC?</h2>
+            <div class="value-grid">
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Respect for Land</h3>
+                    <p>Experience traditional ecological knowledge and sustainable practices.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Community-Led</h3>
+                    <p>Direct support to Indigenous communities and businesses.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Conscious</h3>
+                    <p>Environmentally responsible tourism that protects our heritage.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Cultural Bridge</h3>
+                    <p>Meaningful connections that foster understanding and reconciliation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <img src="https://www.travel-british-columbia.com/wp-content/uploads/2018/09/Haida-Gwaii-Cox-Island-DBC-Grant-Harder-2.jpg"
+                alt="Haida Gwaii Landscapes">
+            <h3>Haida Gwaii: Land of Ancient Stories</h3>
+            <p>Journey to the ancestral lands of the Haida people. Experience traditional storytelling, witness master
+                carvers at work, and explore pristine coastal landscapes that have inspired our culture for generations.
+            </p>
+        </div>
+        <div class="feature-card">
+            <img src="https://cdn.discoverholidays.io/media/general/s/spirit-bears-of-the-great-bear-rain-forest-1.jpg"
+                alt="Spirit Bear in Great Bear Rainforest">
+            <h3>Great Bear Rainforest: Sacred Wilderness</h3>
+            <p>Walk with Indigenous guides through ancient forests, learn about our sustainable practices, and discover
+                the spiritual significance of the rare Spirit Bear in First Nations culture.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://images.adsttc.com/media/images/537a/b821/c07a/80d8/5900/004a/large_jpg/PORTADA.jpg?1400551437"
+                alt="Nk'Mip Desert Cultural Centre">
+            <h3>Nk'Mip: Desert Wisdom</h3>
+            <p>Experience the unique culture of the Osoyoos Indian Band in Canada's only desert. Learn how our people
+                have thrived in this distinctive landscape for countless generations.</p>
+        </div>
+    </section>
+
+    <section class="campaign-section">
+        <h2>Your Visit Sustains Cultures and Communities</h2>
+        <p>Join conscious travelers from Canada and around the world in supporting Indigenous tourism. Whether you're
+            seeking eco-adventures, cultural workshops, or luxury experiences, your journey contributes to the
+            preservation and celebration of BC's Indigenous heritage.</p>
+        <div class="campaign-buttons">
+            <a href="#" class="campaign-btn">Watch Our Stories</a>
+            <a href="#" class="campaign-btn secondary">Plan Your Journey</a>
+        </div>
+        <div class="partners">
+            <p>Proud partners with:</p>
+            <div class="partner-logos">
+                <img src="images/logos/Destination BC.svg" alt="Destination BC">
+                <img src="images/logos/ITAC.svg" alt="Indigenous Tourism Association of Canada">
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Selling Proposition -->
+    <section class="usp-banner">
+        <h2>Why Choose Indigenous Tourism BC?</h2>
+        <p>Experience authentic cultural immersion while directly supporting Indigenous communities and sustainable
+            tourism practices.</p>
+    </section>
+
+    <!-- Campaign Metrics Dashboard -->
+    <section class="metrics-dashboard">
+        <h2>Campaign Performance</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">40%</div>
+                <div class="metric-label">Brand Awareness Increase</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">30%</div>
+                <div class="metric-label">Website Traffic Growth</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">25%</div>
+                <div class="metric-label">Booking Conversion Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">4.8/5</div>
+                <div class="metric-label">Customer Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience-section">
+        <h2>Our Target Audience</h2>
+        <div class="persona-grid">
+            <div class="persona-card">
+                <div class="persona-name">Cultural Explorer</div>
+                <p>Age: 35-55 | Income: $80k+ | Education: University</p>
+                <p>Interests: Cultural tourism, sustainable travel, authentic experiences</p>
+                <div class="persona-stats">
+                    <p>• 70% female</p>
+                    <p>• 85% international travelers</p>
+                    <p>• Average stay: 7-10 days</p>
+                </div>
+            </div>
+            <div class="persona-card">
+                <div class="persona-name">Adventure Seeker</div>
+                <p>Age: 25-45 | Income: $60k+ | Education: College/University</p>
+                <p>Interests: Outdoor activities, wildlife, photography</p>
+                <div class="persona-stats">
+                    <p>• 60% male</p>
+                    <p>• 75% domestic travelers</p>
+                    <p>• Average stay: 5-7 days</p>
+                </div>
+            </div>
+            <div class="persona-card">
+                <div class="persona-name">Family Traveler</div>
+                <p>Age: 30-50 | Income: $100k+ | Education: University</p>
+                <p>Interests: Educational travel, family bonding, cultural learning</p>
+                <div class="persona-stats">
+                    <p>• 80% families with children</p>
+                    <p>• 60% international travelers</p>
+                    <p>• Average stay: 10-14 days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Mix Analysis -->
+    <section class="media-mix">
+        <h2>Campaign Media Mix</h2>
+        <div class="media-grid">
+            <div class="media-channel">
+                <h3>Digital Channels (45%)</h3>
+                <div class="budget-bar">
+                    <div class="budget-fill" style="width: 45%"></div>
+                </div>
+                <ul>
+                    <li>Social Media (Facebook, Instagram, TikTok) - 20%</li>
+                    <li>Search Engine Marketing (Google Ads) - 15%</li>
+                    <li>Content Marketing (Blog, Video) - 10%</li>
+                </ul>
+            </div>
+            <div class="media-channel">
+                <h3>Traditional Media (35%)</h3>
+                <div class="budget-bar">
+                    <div class="budget-fill" style="width: 35%"></div>
+                </div>
+                <ul>
+                    <li>Travel Magazines (Canadian Geographic, Explore) - 15%</li>
+                    <li>Outdoor Billboards (Vancouver, Victoria) - 10%</li>
+                    <li>Radio (CBC, Local Stations) - 10%</li>
+                </ul>
+            </div>
+            <div class="media-channel">
+                <h3>Partnerships & Events (20%)</h3>
+                <div class="budget-bar">
+                    <div class="budget-fill" style="width: 20%"></div>
+                </div>
+                <ul>
+                    <li>Travel Trade Shows - 8%</li>
+                    <li>Cultural Festivals - 7%</li>
+                    <li>Community Events - 5%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Strategy -->
+    <section class="creative-strategy">
+        <h2>Creative Direction</h2>
+        <div class="mood-board">
+            <img src="images/creative/authentic.jpg" alt="Authentic Experience" class="mood-image">
+            <img src="images/creative/connection.jpg" alt="Cultural Connection" class="mood-image">
+            <img src="images/creative/nature.jpg" alt="Natural Beauty" class="mood-image">
+            <img src="images/creative/community.jpg" alt="Community" class="mood-image">
+        </div>
+        <div class="style-guide">
+            <h3>Visual Style Guide</h3>
+            <div class="color-palette">
+                <div class="color" style="background: #1a3d2f"></div>
+                <div class="color" style="background: #e6a23c"></div>
+                <div class="color" style="background: #ffffff"></div>
+            </div>
+            <div class="typography">
+                <h4>Typography</h4>
+                <p>Primary: Segoe UI</p>
+                <p>Secondary: Arial</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Indigenous Tourism BC Campaign | Created with respect for Indigenous cultures
+            and traditions</p>
+    </footer>
+
+    <script>
+        // Simple carousel functionality
+        const slides = document.querySelectorAll('.ad-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+
+</html>
